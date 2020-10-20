@@ -1,4 +1,5 @@
 import './css/style.css';
+import './images/icon-close.svg';
 import images from "./js/gallery-items.js";
 
 

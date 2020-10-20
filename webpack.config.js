@@ -18,6 +18,20 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: ["babel-loader"],
+      },
+      {
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              name: '[path][name].[ext]',
+              limit: 8192,
+              esModule: false,
+            },
+          },
+          'img-loader',
+        ],
       }
     ],
   },
